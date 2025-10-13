@@ -2,14 +2,14 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, ChevronRight, Globe, Mail, MapPin, Phone } from 'lucide-react';
+import { ArrowRight, ChevronRight, Globe } from 'lucide-react'; // Removed unused Mail, MapPin, Phone
 
 const About = () => {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+  // Removed unused isMounted state
+  // const [isMounted, setIsMounted] = useState(false);
+  // useEffect(() => {
+  //   setIsMounted(true);
+  // }, []);
 
   return (
     <>
@@ -33,7 +33,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="mb-6 text-white h2">
-              Taking Libya's Oilfield Services<br />
+              Taking Libya&apos;s Oilfield Services<br />
               To The Next Level
             </h1>
             <p className="mb-8 text-lg text-yellow-400 font-secondary md:text-xl">
@@ -75,11 +75,6 @@ const About = () => {
       
       <section className="relative z-10 py-16 md:py-24 bg-card">
         <div className="container px-4 mx-auto">
-          {/* 
-            KEY CHANGE IS HERE: 
-            We added "lg:items-center" to the grid container.
-            This will vertically align the main content box and the sidebar cards on large screens.
-          */}
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-12 lg:items-center">
             
             {/* Main Content */}
@@ -111,14 +106,14 @@ const About = () => {
                   
                   <p>
                     We are committed to developing local talent, investing in cutting-edge technology, 
-                    and building sustainable partnerships that drive the growth of Libya's energy sector 
+                    and building sustainable partnerships that drive the growth of Libya&apos;s energy sector 
                     for generations to come.
                   </p>
                 </div>
               </div>
             </motion.div>
 
-            {/* Sidebar - This is now back to its original state */}
+            {/* Sidebar */}
             <motion.div 
               className="space-y-6"
               initial={{ opacity: 0, x: 20 }}

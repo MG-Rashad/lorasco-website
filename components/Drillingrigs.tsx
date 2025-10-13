@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Drill, Shield, Users, Gauge } from 'lucide-react';
-import Link from 'next/link';
+// Removed unused 'Link' import
 
 const DrillingRigsPage = () => {
   const features = [
@@ -79,7 +79,7 @@ const DrillingRigsPage = () => {
                     At Lorasco, our drilling services are the cornerstone of our operations. We provide a full spectrum of drilling solutions, from initial well planning to final execution. Our strategic partnership with Baker Hughes allows us to leverage world-class technology and expertise.
                   </p>
                   <p>
-                    Our commitment is to deliver drilling services that not only meet but exceed our clients' expectations in terms of safety, efficiency, and cost-effectiveness. We understand the critical importance of minimizing non-productive time (NPT) and maximizing the rate of penetration (ROP).
+                    Our commitment is to deliver drilling services that not only meet but exceed our clients&apos; expectations in terms of safety, efficiency, and cost-effectiveness. We understand the critical importance of minimizing non-productive time (NPT) and maximizing the rate of penetration (ROP).
                   </p>
                 </div>
               </motion.div>
