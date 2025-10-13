@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Zap, Shield, Users, Gauge } from 'lucide-react';
-import Link from 'next/link';
+// Removed unused 'Link' import
 
 const WirelinePage = () => {
   const features = [
@@ -76,7 +76,8 @@ const WirelinePage = () => {
                 </h2>
                 <div className="space-y-6 text-lg leading-relaxed text-muted-foreground font-secondary">
                   <p>
-                    Lorasco's wireline services provide critical data and intervention capabilities essential for optimizing well performance. Through our partnership with Baker Hughes, we offer a comprehensive suite of wireline services, from open-hole and cased-hole logging to complex well intervention and plug & abandonment operations.
+                    {/* THIS IS THE FIXED LINE */}
+                    Lorasco&apos;s wireline services provide critical data and intervention capabilities essential for optimizing well performance. Through our partnership with Baker Hughes, we offer a comprehensive suite of wireline services, from open-hole and cased-hole logging to complex well intervention and plug & abandonment operations.
                   </p>
                   <p>
                     Our state-of-the-art equipment and expert personnel ensure that we can deliver high-resolution data and execute interventions safely and efficiently, even in the most challenging downhole environments. This allows our clients to make informed decisions and maximize the productivity of their assets.
