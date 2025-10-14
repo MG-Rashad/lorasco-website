@@ -46,7 +46,7 @@ const Contact = () => {
             <div className="space-y-4">
               <div className="flex items-center">
                 <MapPin className="w-5 h-5 mr-3 text-yellow-400" />
-                <span className="text-muted-foreground font-secondary">11th Floor, Al Wahat Tower, Tripoli, Libya</span>
+                <span className="text-muted-foreground font-secondary">Hai Alandalus District, Post Office Street, Tripoli, Libya</span>
               </div>
               <div className="flex items-center">
                 <Phone className="w-5 h-5 mr-3 text-yellow-400" />
