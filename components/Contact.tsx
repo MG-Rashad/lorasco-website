@@ -11,12 +11,10 @@ const Contact = () => {
     message: ''
   });
 
-  // Added type for the event 'e'
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Added type for the event 'e'
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Handle form submission here (e.g., send to an API)
@@ -69,7 +67,7 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-4">
               <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Your Name" required className="w-full px-4 py-3 border rounded-lg bg-background border-border text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-yellow-400" />
               <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Your Email" required className="w-full px-4 py-3 border rounded-lg bg-background border-border text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-yellow-400" />
-              <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Your Message" rows="5" required className="w-full px-4 py-3 border rounded-lg bg-background border-border text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
+              <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Your Message" rows={5} required className="w-full px-4 py-3 border rounded-lg bg-background border-border text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
               <motion.button type="submit" className="flex items-center justify-center w-full gap-2 px-8 py-4 font-bold text-black transition-all duration-300 transform bg-yellow-400 rounded-lg hover:bg-yellow-300 hover:scale-105 font-primary" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 Send Message
                 <Send className="w-5 h-5" />
