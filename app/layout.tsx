@@ -22,7 +22,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="en">
+    // I added className="dark" to this line to force the dark theme
+    <html lang="en" className="dark">
       <body className={`${dmSans.variable} ${barlow.variable} antialiased`}>
         {children}
       </body>
