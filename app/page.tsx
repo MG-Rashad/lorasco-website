@@ -47,9 +47,9 @@ const Home = (): JSX.Element => {
         <Ourteam />
       </Suspense>
 
-      <Suspense fallback={<SectionLoader />}>
+      
         <Contact />
-      </Suspense>
+      
 
       <Suspense fallback={<SectionLoader />}>
         <Footer />
