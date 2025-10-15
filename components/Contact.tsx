@@ -24,7 +24,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="px-4 py-20 bg-card" style={{ backgroundColor: 'black' }}>
+    <section id="contact" className="px-4 py-20 bg-slate-900" style={{ backgroundColor: 'black' }}>
       <div className="max-w-4xl mx-auto">
         <motion.h2 
           className="mb-12 text-center h3 text-foreground"
