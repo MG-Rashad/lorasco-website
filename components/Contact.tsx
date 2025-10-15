@@ -2,10 +2,10 @@
 
 const Contact = () => {
   return (
-    <section id="contact" className="min-h-screen bg-red-500">
-      <div className="container p-4 mx-auto">
-        <h1 className="text-4xl font-bold text-white">Contact Section Test</h1>
-        <p>If you see a red background, Tailwind is working!</p>
+    <section id="contact" className="px-4 py-20 bg-card">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="mb-12 text-center h3 text-foreground">Get In Touch</h2>
+        <p>The basic structure is working!</p>
       </div>
     </section>
   );
