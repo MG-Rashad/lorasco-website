@@ -47,9 +47,14 @@ const Home = (): JSX.Element => {
         <Ourteam />
       </Suspense>
 
-      
+            <Suspense fallback={<SectionLoader />}>
         <Contact />
-      
+      </Suspense>
+
+      {/* --- Separator Line --- */}
+      <div className="container mx-auto">
+        <hr className="border-gray-700" />
+      </div>
 
       <Suspense fallback={<SectionLoader />}>
         <Footer />
