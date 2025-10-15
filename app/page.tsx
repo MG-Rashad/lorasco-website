@@ -51,10 +51,14 @@ const Home = (): JSX.Element => {
         <Contact />
       </Suspense>
 
-      {/* --- Separator Line --- */}
-      <div className="container mx-auto">
-        <hr className="border-gray-700" />
-      </div>
+      {/* --- Separator Section --- */}
+      <section className="py-8 bg-gray-800">
+        <div className="container mx-auto text-center">
+          <p className="text-sm text-gray-400 font-secondary">
+            © {new Date().getFullYear()} Lorasco. All Rights Reserved.
+          </p>
+        </div>
+      </section>
 
       <Suspense fallback={<SectionLoader />}>
         <Footer />
