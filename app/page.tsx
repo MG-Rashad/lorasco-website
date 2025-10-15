@@ -1,7 +1,7 @@
 'use client';
 
 import { JSX, lazy, Suspense } from "react";
-import { motion } from 'framer-motion'; // <-- THIS IS THE MISSING IMPORT
+import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
 // Critical components for the initial view (load immediately)
@@ -68,7 +68,7 @@ const Home = (): JSX.Element => {
               Ready to Start Your Next Project?
             </h2>
             <p className="max-w-2xl mx-auto mb-8 text-lg text-gray-600 font-secondary">
-              Our team of experts is standing by to provide innovative solutions tailored to your needs. Let's build the future of energy together.
+              Let&apos;s build the future of energy together.
             </p>
             <motion.a
               href="#contact"
