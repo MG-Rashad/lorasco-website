@@ -36,7 +36,7 @@ const Services = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          Our Services
+          What we do
         </motion.h2>
         <div className="grid gap-8 md:grid-cols-3">
           {services.map((service, index) => (
