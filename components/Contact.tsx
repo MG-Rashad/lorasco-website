@@ -2,9 +2,16 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Phone, Send } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, Flame } from 'lucide-react';
 
 const Contact = () => {
+  // State to control the background attachment
+  const [isFlameFixed, setIsFlameFixed] = useState(true);
+
+  const toggleFlame = () => {
+    setIsFlameFixed(!isFlameFixed);
+  };
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -24,8 +31,29 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="px-4 py-20 bg-gray-900">
-      <div className="max-w-4xl mx-auto">
+    <section 
+      id="contact" 
+      className="relative px-4 py-20 bg-gray-900 bg-center bg-no-repeat bg-cover"
+      style={{ 
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('/assets/img/contact/contact.jpg')`,
+        backgroundAttachment: isFlameFixed ? 'fixed' : 'scroll'
+      }}
+    >
+      {/* Toggle Button */}
+      <div className="absolute z-10 top-4 right-4">
+        <motion.button
+          onClick={toggleFlame}
+          className="flex items-center gap-2 px-3 py-2 text-xs font-medium text-white transition-colors bg-gray-800 rounded-full hover:bg-gray-700"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          title={`Flame is currently ${isFlameFixed ? 'fixed' : 'scrolling'}`}
+        >
+          <Flame className={`w-4 h-4 transition-transform duration-300 ${isFlameFixed ? '' : 'rotate-180'}`} />
+          <span className="hidden sm:inline">{isFlameFixed ? 'Fixed' : 'Scroll'}</span>
+        </motion.button>
+      </div>
+
+      <div className="relative z-10 max-w-4xl mx-auto">
         <motion.h2 
           className="mb-12 text-center text-white h3"
           initial={{ opacity: 0, y: 20 }}
@@ -46,7 +74,7 @@ const Contact = () => {
             <div className="space-y-4">
               <div className="flex items-center">
                 <MapPin className="w-5 h-5 mr-3 text-yellow-400" />
-                <span className="text-gray-300 font-secondary">Post Office Street Hai Alandalus District, Tripoli, Libya</span>
+                <span className="text-gray-300 font-secondary">Hai Alandalus Post Office Street, Tripoli, Libya</span>
               </div>
               <div className="flex items-center">
                 <Phone className="w-5 h-5 mr-3 text-yellow-400" />
