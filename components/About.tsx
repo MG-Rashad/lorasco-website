@@ -1,30 +1,24 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, ChevronRight, Globe } from 'lucide-react'; // Removed unused Mail, MapPin, Phone
+import { ArrowRight, ChevronRight, Globe } from 'lucide-react';
 
 const About = () => {
-  // Removed unused isMounted state
-  // const [isMounted, setIsMounted] = useState(false);
-  // useEffect(() => {
-  //   setIsMounted(true);
-  // }, []);
-
   return (
     <>
-  {/* Hero Section with Your Image as Background */}
-  <section
-  id="about" 
-  className="relative flex items-center justify-center py-20 bg-center bg-no-repeat bg-cover"  // Changed from min-h-screen to padding
-  style={{ 
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('/assets/img/about/about.jpg')`,
-    backgroundColor: '#000000',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundAttachment: 'fixed'
-  }}
->
+      {/* Hero Section */}
+      <section
+        id="about" 
+        className="relative flex items-center justify-center py-20 bg-center bg-no-repeat bg-cover"
+        style={{ 
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('/assets/img/about/about.jpg')`,
+          backgroundColor: '#000000',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
         <div className="container relative z-10 px-4 mx-auto">
           <motion.div 
             className="max-w-4xl mx-auto text-center text-white"
@@ -39,8 +33,6 @@ const About = () => {
             <p className="mb-8 text-lg text-yellow-400 font-secondary md:text-xl">
               A BAKER HUGHES CHANNEL PARTNER
             </p>
-            
-            {/* Baker Hughes Button */}
             <motion.a
               href="https://www.bakerhughes.com/"
               target="_blank"
@@ -54,8 +46,6 @@ const About = () => {
             </motion.a>
           </motion.div>
         </div>
-
-        {/* Scroll Indicator */}
         <motion.div 
           className="absolute text-white transform -translate-x-1/2 bottom-8 left-1/2"
           initial={{ opacity: 0 }}
@@ -72,7 +62,6 @@ const About = () => {
       </section>
 
       {/* Company Information Section */}
-      
       <section className="relative z-10 py-16 md:py-24 bg-card">
         <div className="container px-4 mx-auto">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-12 lg:items-center">
@@ -89,21 +78,18 @@ const About = () => {
                 <h3 className="mb-6 h3 text-foreground">
                   About Lorasco!
                 </h3>
-                
                 <div className="space-y-6 text-lg leading-relaxed text-muted-foreground font-secondary">
                   <p>
                     Lorasco is a privately-owned oilfield service company with a primary focus on Libya. 
                     Established with a vision to revolutionize the Libyan energy sector, we began our 
                     drilling services operations in 2019.
                   </p>
-                  
                   <p>
                     Our strategic partnership with Baker Hughes ensures service continuity and brings 
                     world-class technology and expertise to the Libyan oil and gas industry. This 
                     collaboration enables us to deliver exceptional value to our clients while maintaining 
                     the highest standards of safety and operational excellence.
                   </p>
-                  
                   <p>
                     We are committed to developing local talent, investing in cutting-edge technology, 
                     and building sustainable partnerships that drive the growth of Libya&apos;s energy sector 
@@ -123,28 +109,28 @@ const About = () => {
             >
               {/* Services Card */}
               <motion.div 
-                className="p-6 transition-all duration-300 transform border shadow-lg bg-background border-border rounded-xl hover:scale-105 hover:shadow-xl hover:border-yellow-400/50"
+                className="p-6 text-center transition-all duration-300 transform border shadow-lg bg-background border-border rounded-xl hover:scale-105 hover:shadow-xl hover:border-yellow-400/50 md:text-left"
                 whileHover={{ y: -5 }}
               >
-                <h3 className="flex items-center mb-4 text-xl font-bold text-foreground font-primary">
+                <h3 className="flex items-center justify-center mb-4 text-xl font-bold md:justify-start text-foreground font-primary">
                   <Globe className="w-5 h-5 mr-2 text-yellow-400" />
                   SERVICES
                 </h3>
                 <ul className="space-y-3">
                   <li>
-                    <a href="#drilling" className="flex items-start text-yellow-400 transition-colors duration-200 cursor-pointer hover:text-yellow-300 font-secondary">
+                    <a href="#drilling" className="flex items-center justify-center text-yellow-400 transition-colors duration-200 cursor-pointer md:justify-start hover:text-yellow-300 font-secondary">
                       <ChevronRight className="flex-shrink-0 w-4 h-4 mt-1 mr-2" />
                       <span>Drilling Rigs</span>
                     </a>
                   </li>
                   <li>
-                    <a href="#wireline" className="flex items-start text-yellow-400 transition-colors duration-200 cursor-pointer hover:text-yellow-300 font-secondary">
+                    <a href="#wireline" className="flex items-center justify-center text-yellow-400 transition-colors duration-200 cursor-pointer md:justify-start hover:text-yellow-300 font-secondary">
                       <ChevronRight className="flex-shrink-0 w-4 h-4 mt-1 mr-2" />
                       <span>Wireline Services</span>
                     </a>
                   </li>
                   <li>
-                    <a href="#pressure" className="flex items-start text-yellow-400 transition-colors duration-200 cursor-pointer hover:text-yellow-300 font-secondary">
+                    <a href="#pressure" className="flex items-center justify-center text-yellow-400 transition-colors duration-200 cursor-pointer md:justify-start hover:text-yellow-300 font-secondary">
                       <ChevronRight className="flex-shrink-0 w-4 h-4 mt-1 mr-2" />
                       <span>Pressure Pumping</span>
                     </a>
@@ -154,25 +140,25 @@ const About = () => {
 
               {/* Quick Links Card */}
               <motion.div 
-                className="p-6 transition-all duration-300 transform border shadow-lg bg-background border-border rounded-xl hover:scale-105 hover:shadow-xl hover:border-yellow-400/50"
+                className="p-6 text-center transition-all duration-300 transform border shadow-lg bg-background border-border rounded-xl hover:scale-105 hover:shadow-xl hover:border-yellow-400/50 md:text-left"
                 whileHover={{ y: -5 }}
               >
                 <h3 className="mb-4 text-xl font-bold text-foreground font-primary">MENU</h3>
                 <ul className="space-y-3">
                   <li>
-                    <a href="#about" className="flex items-center font-medium text-yellow-400 transition-colors duration-200 cursor-pointer hover:text-yellow-300 font-secondary">
+                    <a href="#about" className="flex items-center justify-center font-medium text-yellow-400 transition-colors duration-200 cursor-pointer md:justify-start hover:text-yellow-300 font-secondary">
                       <ChevronRight className="w-4 h-4 mr-2" />
                       About Us
                     </a>
                   </li>
                   <li>
-                    <a href="#team" className="flex items-center font-medium text-yellow-400 transition-colors duration-200 cursor-pointer hover:text-yellow-300 font-secondary">
+                    <a href="#team" className="flex items-center justify-center font-medium text-yellow-400 transition-colors duration-200 cursor-pointer md:justify-start hover:text-yellow-300 font-secondary">
                       <ChevronRight className="w-4 h-4 mr-2" />
                       Our Team
                     </a>
                   </li>
                   <li>
-                    <a href="#contact" className="flex items-center font-medium text-yellow-400 transition-colors duration-200 cursor-pointer hover:text-yellow-300 font-secondary">
+                    <a href="#contact" className="flex items-center justify-center font-medium text-yellow-400 transition-colors duration-200 cursor-pointer md:justify-start hover:text-yellow-300 font-secondary">
                       <ChevronRight className="w-4 h-4 mr-2" />
                       Contact
                     </a>

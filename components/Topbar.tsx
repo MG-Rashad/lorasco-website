@@ -9,11 +9,19 @@ const Topbar = () => {
       <div className="container flex items-center justify-between px-4 mx-auto">
         
         {/* Left Side: Contact Information */}
-        <div className="flex items-center">
-          <Phone className="w-4 h-4 mr-2 text-gray-900" />
-          <span>
-            <strong className="font-bold text-black">Tripoli</strong>: +218 21 333 4244 | <strong className="font-bold text-black">Benghazi</strong>: +218 61 222 7272
-          </span>
+        <div className="flex flex-col space-y-1 md:flex-row md:items-center md:space-y-0">
+          <div className="flex items-center">
+            <Phone className="w-4 h-4 mr-2 text-gray-900" />
+            <span>
+              <strong className="font-bold text-black">Tripoli</strong>: +218 21 333 4244
+            </span>
+          </div>
+          <div className="flex items-center">
+            <Phone className="w-4 h-4 mr-2 text-gray-900" />
+            <span>
+              <strong className="font-bold text-black">Benghazi</strong>: +218 61 222 7272
+            </span>
+          </div>
         </div>
 
         {/* Right Side: Social Media Links */}

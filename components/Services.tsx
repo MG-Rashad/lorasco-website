@@ -36,21 +36,21 @@ const Services = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          What we do
+          Services
         </motion.h2>
         <div className="grid gap-8 md:grid-cols-3">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
               id={service.href.substring(1)}
-              className="p-8 transition-all duration-300 border rounded-lg shadow-lg bg-background border-border hover:shadow-xl hover:border-yellow-400/50"
+              className="p-8 text-center transition-all duration-300 border rounded-lg shadow-lg bg-background border-border hover:shadow-xl hover:border-yellow-400/50 md:text-left"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
               whileHover={{ y: -10 }}
             >
-              <div className="flex items-center justify-center w-16 h-16 mb-6 transition-transform duration-300 bg-yellow-400 rounded-full hover:scale-110">
+              <div className="flex items-center justify-center w-16 h-16 mx-auto mb-6 transition-transform duration-300 bg-yellow-400 rounded-full hover:scale-110 md:mx-0">
                 <service.icon className="w-8 h-8 text-foreground" />
               </div>
               <h3 className="mb-4 h4 text-foreground">{service.title}</h3>
@@ -59,7 +59,7 @@ const Services = () => {
               </p>
               <motion.a
                 href={service.href}
-                className="flex items-center gap-2 font-medium text-yellow-400 transition-all font-primary hover:gap-3"
+                className="flex items-center justify-center gap-2 font-medium text-yellow-400 transition-all font-primary hover:gap-3 md:justify-start"
                 whileHover={{ x: 5 }}
               >
                 Learn More
